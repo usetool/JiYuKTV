@@ -8,7 +8,7 @@ namespace Server
 {
     public class DBHelper
     {
-        private static string connStr = "DataSource=.;Initial Catalog=MyKTV;user=sa;pwd=sa";
+        private static string connStr = "Data Source=.;Initial Catalog=MyKTV;User ID=sa;Pwd=sa";
         /// <summary>
         /// 数据库连接对象
         /// </summary>

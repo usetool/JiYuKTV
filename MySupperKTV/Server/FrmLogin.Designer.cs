@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnCancle = new System.Windows.Forms.Button();
+            this.txtAccount = new System.Windows.Forms.TextBox();
+            this.txtPwd = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -43,30 +45,33 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 12);
             this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.label1.Text = "账号：";
             // 
-            // button1
+            // btnCancle
             // 
-            this.button1.Location = new System.Drawing.Point(65, 136);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCancle.Location = new System.Drawing.Point(254, 136);
+            this.btnCancle.Name = "btnCancle";
+            this.btnCancle.Size = new System.Drawing.Size(75, 23);
+            this.btnCancle.TabIndex = 4;
+            this.btnCancle.Text = "取消";
+            this.btnCancle.UseVisualStyleBackColor = true;
+            this.btnCancle.Click += new System.EventHandler(this.btnCancle_Click);
             // 
-            // textBox1
+            // txtAccount
             // 
-            this.textBox1.Location = new System.Drawing.Point(152, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
-            this.textBox1.TabIndex = 2;
+            this.txtAccount.Location = new System.Drawing.Point(152, 31);
+            this.txtAccount.Name = "txtAccount";
+            this.txtAccount.Size = new System.Drawing.Size(134, 21);
+            this.txtAccount.TabIndex = 1;
             // 
-            // textBox2
+            // txtPwd
             // 
-            this.textBox2.Location = new System.Drawing.Point(150, 81);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 21);
-            this.textBox2.TabIndex = 3;
+            this.txtPwd.Location = new System.Drawing.Point(150, 81);
+            this.txtPwd.Name = "txtPwd";
+            this.txtPwd.PasswordChar = '*';
+            this.txtPwd.Size = new System.Drawing.Size(136, 21);
+            this.txtPwd.TabIndex = 2;
+            this.txtPwd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPwd_KeyPress);
             // 
             // label2
             // 
@@ -75,32 +80,39 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 12);
             this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
+            this.label2.Text = "密码：";
             // 
-            // button2
+            // btnLogin
             // 
-            this.button2.Location = new System.Drawing.Point(204, 136);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnLogin.Location = new System.Drawing.Point(101, 136);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "登录";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 60;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(400, 182);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtPwd);
+            this.Controls.Add(this.txtAccount);
+            this.Controls.Add(this.btnCancle);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "管理员登录";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,11 +121,12 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnCancle;
+        private System.Windows.Forms.TextBox txtAccount;
+        private System.Windows.Forms.TextBox txtPwd;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
