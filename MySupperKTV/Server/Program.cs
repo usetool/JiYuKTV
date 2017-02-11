@@ -18,8 +18,9 @@ namespace Server
             FrmLogin login = new FrmLogin();
             if (login.ShowDialog() == DialogResult.OK)
             {
-                Application.Run(new FrmAdmin());
+                Application.Run(new FrmLoading());
             }
+            //Application.Run(new FrmAdmin());
         }
     }
 }

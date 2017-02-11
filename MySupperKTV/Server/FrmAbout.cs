@@ -15,5 +15,11 @@ namespace Server
         {
             InitializeComponent();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //使用默认浏览器打开网页
+            System.Diagnostics.Process.Start("http://www.dtblog.cn");
+        }
     }
 }

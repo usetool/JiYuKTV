@@ -43,20 +43,20 @@ namespace Server
         private bool Login()
         {
 
-            //StringBuilder sb = new StringBuilder();
-            //sb.AppendLine("select count(*) from admin_info ");
-            //sb.AppendFormat("where admin_name='{0}'", txtAccount.Text);
-            //sb.AppendFormat(" and admin_pwd='{0}'", txtPwd.Text);
+            //StringBuilder sql = new StringBuilder();
+            //sql.AppendLine("select count(*) from admin_info ");
+            //sql.AppendFormat("where admin_name='{0}'", txtAccount.Text);
+            //sql.AppendFormat(" and admin_pwd='{0}'", txtPwd.Text);
             //防止SQL注入
             string sql = @"select count(*) from admin_info where 
                 admin_name=@name and admin_pwd=@pwd";
             DBHelper.conn.Open();
             try
             {
-                SqlCommand cmd = new SqlCommand(sql,DBHelper.conn);
+                SqlCommand cmd = new SqlCommand(sql.ToString(),DBHelper.conn);
                 //防止SQL注入
                 cmd.Parameters.AddWithValue("@name", txtAccount.Text);
-                cmd.Parameters.AddWithValue("@pwd",txtPwd.Text);
+                cmd.Parameters.AddWithValue("@pwd", txtPwd.Text);
                 int result = (int)cmd.ExecuteScalar();
                 if (result == 1)
                 {
@@ -101,8 +101,11 @@ namespace Server
         /// <param name="e"></param>
         private void timer1_Tick(object sender, EventArgs e)
         {
-            this.Height -= 20;
-            this.Opacity -= 0.05;
+            this.Height -= 30;//减小高度
+            this.Width -= 30;//减小宽度
+            this.Opacity -= 0.1;//透明度
+            this.Left += 15;
+            this.Top += 15;
             if (this.Opacity <= 0)
             {
                 this.DialogResult = DialogResult.OK;

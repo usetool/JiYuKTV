@@ -118,30 +118,49 @@
       <DependentUpon>FrmSongPath.cs</DependentUpon>
     </Compile>
     <Compile Include="KTVUtil.cs" />
+    <Compile Include="FrmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoading.Designer.cs">
+      <DependentUpon>FrmLoading.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditSinger.resx">
+      <DependentUpon>FrmEditSinger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLoading.resx">
+      <DependentUpon>FrmLoading.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSingerList.resx">
+      <DependentUpon>FrmSingerList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSongPath.resx">
       <DependentUpon>FrmSongPath.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -150,6 +169,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="get80.ico" />
+    <None Include="Resources\背景.bmp" />
+    <None Include="Resources\test.png" />
+    <None Include="Resources\normal.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
