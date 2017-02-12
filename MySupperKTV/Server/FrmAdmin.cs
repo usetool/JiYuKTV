@@ -83,6 +83,7 @@ namespace Server
         private void tsmiSingerPhoto_Click(object sender, EventArgs e)
         {
             FrmPhotoPath photoPath = new FrmPhotoPath();
+            photoPath.isSinger = true;
             photoPath.MdiParent = this;
             photoPath.Show();
         }
@@ -93,9 +94,10 @@ namespace Server
         /// <param name="e"></param>
         private void tsmiSongPath_Click(object sender, EventArgs e)
         {
-            FrmSongPath songPath = new FrmSongPath();
-            songPath.MdiParent = this;
-            songPath.Show();
+            FrmPhotoPath photoPath = new FrmPhotoPath();
+            photoPath.isSinger = false;
+            photoPath.MdiParent = this;
+            photoPath.Show();
         }
         /// <summary>
         /// 关于

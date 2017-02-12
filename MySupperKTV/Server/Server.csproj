@@ -117,6 +117,7 @@
     <Compile Include="FrmSongPath.Designer.cs">
       <DependentUpon>FrmSongPath.cs</DependentUpon>
     </Compile>
+    <Compile Include="IOUtil.cs" />
     <Compile Include="KTVUtil.cs" />
     <Compile Include="FrmLoading.cs">
       <SubType>Form</SubType>
@@ -140,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPhotoPath.resx">
+      <DependentUpon>FrmPhotoPath.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSingerList.resx">
       <DependentUpon>FrmSingerList.cs</DependentUpon>
