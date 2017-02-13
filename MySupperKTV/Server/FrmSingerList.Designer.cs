@@ -32,17 +32,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSingerName = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.singer_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.singer_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.singer_sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.singer_description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.singer_photo_url = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSearch = new System.Windows.Forms.Button();
             this.cboSingerType = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.singer_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.singer_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.singer_sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.singer_description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.singer_photo_url = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -85,56 +85,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(644, 331);
             this.dataGridView1.TabIndex = 2;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiEdit,
-            this.tsmiDelete});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 48);
-            // 
-            // tsmiEdit
-            // 
-            this.tsmiEdit.Name = "tsmiEdit";
-            this.tsmiEdit.Size = new System.Drawing.Size(100, 22);
-            this.tsmiEdit.Text = "修改";
-            this.tsmiEdit.Click += new System.EventHandler(this.tsmiEdit_Click);
-            // 
-            // tsmiDelete
-            // 
-            this.tsmiDelete.Name = "tsmiDelete";
-            this.tsmiDelete.Size = new System.Drawing.Size(100, 22);
-            this.tsmiDelete.Text = "删除";
-            this.tsmiDelete.Click += new System.EventHandler(this.tsmiDelete_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(581, 16);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 3;
-            this.btnSearch.Text = "查询";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // cboSingerType
-            // 
-            this.cboSingerType.FormattingEnabled = true;
-            this.cboSingerType.Location = new System.Drawing.Point(428, 18);
-            this.cboSingerType.Name = "cboSingerType";
-            this.cboSingerType.Size = new System.Drawing.Size(121, 20);
-            this.cboSingerType.TabIndex = 4;
-            this.cboSingerType.SelectionChangeCommitted += new System.EventHandler(this.cboSingerType_SelectionChangeCommitted);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(352, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "歌手类型";
-            // 
             // singer_id
             // 
             this.singer_id.DataPropertyName = "singer_id";
@@ -170,6 +120,56 @@
             this.singer_photo_url.Name = "singer_photo_url";
             this.singer_photo_url.ReadOnly = true;
             this.singer_photo_url.Visible = false;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiEdit,
+            this.tsmiDelete});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 70);
+            // 
+            // tsmiEdit
+            // 
+            this.tsmiEdit.Name = "tsmiEdit";
+            this.tsmiEdit.Size = new System.Drawing.Size(152, 22);
+            this.tsmiEdit.Text = "修改";
+            this.tsmiEdit.Click += new System.EventHandler(this.tsmiEdit_Click);
+            // 
+            // tsmiDelete
+            // 
+            this.tsmiDelete.Name = "tsmiDelete";
+            this.tsmiDelete.Size = new System.Drawing.Size(152, 22);
+            this.tsmiDelete.Text = "删除";
+            this.tsmiDelete.Click += new System.EventHandler(this.tsmiDelete_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(581, 16);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Text = "查询";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // cboSingerType
+            // 
+            this.cboSingerType.FormattingEnabled = true;
+            this.cboSingerType.Location = new System.Drawing.Point(428, 18);
+            this.cboSingerType.Name = "cboSingerType";
+            this.cboSingerType.Size = new System.Drawing.Size(121, 20);
+            this.cboSingerType.TabIndex = 4;
+            this.cboSingerType.SelectionChangeCommitted += new System.EventHandler(this.cboSingerType_SelectionChangeCommitted);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(352, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "歌手类型";
             // 
             // FrmSingerList
             // 

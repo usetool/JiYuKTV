@@ -110,5 +110,18 @@ namespace Server
             about.MdiParent = this;
             about.Show();
         }
+
+        private void FrmAdmin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("确定要退出吗？","提示",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
+            if (result==DialogResult.OK)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

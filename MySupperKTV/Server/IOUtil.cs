@@ -16,7 +16,7 @@ namespace Server
         /// <summary>
         /// 完成数量
         /// </summary>
-        private int overCount;
+        public int overCount;
         private string dirPath;
         /// <summary>
         /// 文件及文件夹总数量，此属性全局记录，使用后必须手动清空！
@@ -71,46 +71,35 @@ namespace Server
                 GetDirFilesNum(dirInfo.FullName);
             }
         }
-
         /// <summary>
-        /// 转移目录下的文件及目录，更新progressBar中进度值
+        /// 删除目录及文件
         /// </summary>
-        /// <param name="progressBar">进度条对象</param>
-        /// <param name="formPath">源路径</param>
-        /// <param name="toPath">目标路径</param>
-        /// <param name="concatPath">拼接的路径</param>
-        public void UpdateProgressBar(ProgressBar progressBar, string formPath, string toPath, string concatPath)
+        /// <param name="text">要删除的目录</param>
+        /// <param name="progressBar1">更新的进度条</param>
+        public void DeleteDirectory(string text, ProgressBar progressBar)
         {
-            string tempPath = concatPath;//当前目录结构的路径
-            int okNum = 0;//完成的数量
-
-            DirectoryInfo dir = new DirectoryInfo(formPath);
-            //复制目录下的文件到目标
-            foreach (FileInfo fileInfo in dir.GetFiles())
+            DirectoryInfo dir = new DirectoryInfo(text);
+            foreach (FileInfo file in dir.GetFiles())
             {
-                fileInfo.CopyTo(toPath + tempPath + fileInfo.Name);
-                okNum++;
-                //计算更新进度条
-                double percent = Convert.ToDouble(okNum) / filesCount;//计算出分数
-                progressBar.Value = (int)(100 * percent);//求出值
+                file.Delete();
+                overCount++;
+                // 计算更新进度条
+                double percent1 = Convert.ToDouble(overCount) / filesCount;//计算出分数
+                progressBar.Value = (int)(100 * percent1) / 2;//求出值
             }
-            //复制目录下的目录到目标
-            foreach (DirectoryInfo dirInfo in dir.GetDirectories())
+            foreach (DirectoryInfo item in dir.GetDirectories())
             {
-                Directory.CreateDirectory(toPath + tempPath + dirInfo.Name);
-                concatPath += dirInfo.Name + "\\";
-                okNum++;
-                //计算更新进度条
-                double percent = Convert.ToDouble(okNum) / filesCount;//计算出分数
-                progressBar.Value = (int)(100 * percent)/2;//求出值
-                                                         //递归目录更新
-                UpdateProgressBar(progressBar, dirInfo.FullName, toPath, concatPath);
+                //如果目录下有文件
+                if (item.GetFiles().Count()>0)
+                {
+                    DeleteDirectory(item.FullName, progressBar);
+                }
+                item.Delete();
+                overCount++;
+                // 计算更新进度条
+                double percent0 = Convert.ToDouble(overCount) / filesCount;//计算出分数
+                progressBar.Value = (int)(100 * percent0) / 2;//求出值
             }
-        }
-
-        public void DeleteDirectory(string text, ProgressBar progressBar1)
-        {
-            //throw new NotImplementedException();
         }
 
         /// <summary>
@@ -118,7 +107,7 @@ namespace Server
         /// </summary>
         /// <param name="srcdir"></param>
         /// <param name="desdir"></param>
-        public void CopyDirectory(string srcdir, string desdir,ProgressBar progressBar)
+        public void CopyDirectory(string srcdir, string desdir, ProgressBar progressBar)
         {
             string folderName = srcdir.Substring(srcdir.LastIndexOf("\\") + 1);
 
@@ -140,18 +129,19 @@ namespace Server
                     {
                         Directory.CreateDirectory(currentdir);
                         overCount++;
-                        
+                        // 计算更新进度条
+                        double percent0 = Convert.ToDouble(overCount) / filesCount;//计算出分数
+                        progressBar.Value = (int)(100 * percent0) / 2;//求出值
                     }
                     //计算更新进度条
                     double percent1 = Convert.ToDouble(overCount) / filesCount;//计算出分数
-                    progressBar.Value = (int)(100 * percent1)/2;//求出值
-                    CopyDirectory(file, desfolderdir,progressBar);
+                    progressBar.Value = (int)(100 * percent1) / 2;//求出值
+                    CopyDirectory(file, desfolderdir, progressBar);
                 }
 
                 else // 否则直接copy文件
                 {
                     string srcfileName = file.Substring(file.LastIndexOf("\\") + 1);
-
                     srcfileName = desfolderdir + "\\" + srcfileName;
 
 
@@ -161,15 +151,13 @@ namespace Server
                         overCount++;
                         //计算更新进度条
                         double percent2 = Convert.ToDouble(overCount) / filesCount;//计算出分数
-                        progressBar.Value = (int)(100 * percent2)/2;//求出值
+                        progressBar.Value = (int)(100 * percent2) / 2;//求出值
                     }
-
-
                     File.Copy(file, srcfileName);
                     overCount++;
                     //计算更新进度条
                     double percent3 = Convert.ToDouble(overCount) / filesCount;//计算出分数
-                    progressBar.Value = (int)(100 * percent3)/2;//求出值
+                    progressBar.Value = (int)(100 * percent3) / 2;//求出值
                 }
             }//foreach 
         }//function end 

@@ -88,6 +88,7 @@ namespace Server
             util.GetDirFilesNum(txtNow.Text);
             //复制和删除操作各占50%
             util.CopyDirectory(txtNow.Text, txtNew.Text, progressBar1);
+            util.overCount = 0;
             util.DeleteDirectory(txtNow.Text, progressBar1);
             progressBar1.Visible = false;
             UpdatePath();

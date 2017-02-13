@@ -13,10 +13,27 @@ namespace Server
 {
     public partial class FrmSingerList : Form
     {
+        /// <summary>
+        /// 是否是选择歌手
+        /// </summary>
+        public bool isChooseSinger;
+        /// <summary>
+        /// 编辑歌手窗体
+        /// </summary>
+        public FrmEditSong frmEditSong;
         DataSet ds;
         public FrmSingerList()
         {
             InitializeComponent();
+            
+        }
+        public void chooseSinger(object sender,EventArgs e)
+        {
+            int id =Convert.ToInt32( dataGridView1.SelectedRows[0].Cells["singer_id"].Value);
+            string name = dataGridView1.SelectedRows[0].Cells["singer_name"].Value.ToString();
+            frmEditSong.txtSinger.Text = name;
+            frmEditSong.txtSinger.Tag = id;
+            this.Close();
         }
         /// <summary>
         /// 右键菜单点击编辑
@@ -83,6 +100,13 @@ namespace Server
         {
             BindAllInfo();
             dataGridView1.AutoGenerateColumns = false;
+            if (isChooseSinger)
+            {
+                ToolStripMenuItem ts = new ToolStripMenuItem("选择歌手");
+                ts.Name = "chooseSinger";
+                ts.Click += chooseSinger;//绑定事件
+                contextMenuStrip1.Items.Add(ts);
+            }
         }
         /// <summary>
         /// 更新绑定所有信息（可以给其他窗体用）

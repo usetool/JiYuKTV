@@ -15,7 +15,7 @@ namespace TestUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmIO());
+            Application.Run(new FrmMain());
         }
     }
 }

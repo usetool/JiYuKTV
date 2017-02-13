@@ -30,19 +30,19 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.歌手管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiAddSinger = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSingerInfo = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
             this.歌曲管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiAddSong = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSongInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.设置资源路径ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSingerPhoto = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSongPath = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiWebSite = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiAddSinger = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiSingerInfo = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiAddSong = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiSongInfo = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiSingerPhoto = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiSongPath = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +55,7 @@
             this.帮助ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(827, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(827, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -66,8 +66,29 @@
             this.tsmiSingerInfo,
             this.tsmiExit});
             this.歌手管理ToolStripMenuItem.Name = "歌手管理ToolStripMenuItem";
-            this.歌手管理ToolStripMenuItem.Size = new System.Drawing.Size(83, 21);
+            this.歌手管理ToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.歌手管理ToolStripMenuItem.Text = "歌手管理(&S)";
+            // 
+            // tsmiAddSinger
+            // 
+            this.tsmiAddSinger.Name = "tsmiAddSinger";
+            this.tsmiAddSinger.Size = new System.Drawing.Size(166, 22);
+            this.tsmiAddSinger.Text = "新增歌手(&N)";
+            this.tsmiAddSinger.Click += new System.EventHandler(this.tsmiAddSinger_Click);
+            // 
+            // tsmiSingerInfo
+            // 
+            this.tsmiSingerInfo.Name = "tsmiSingerInfo";
+            this.tsmiSingerInfo.Size = new System.Drawing.Size(166, 22);
+            this.tsmiSingerInfo.Text = "查询歌手信息(&S)";
+            this.tsmiSingerInfo.Click += new System.EventHandler(this.tsmiSingerInfo_Click);
+            // 
+            // tsmiExit
+            // 
+            this.tsmiExit.Name = "tsmiExit";
+            this.tsmiExit.Size = new System.Drawing.Size(166, 22);
+            this.tsmiExit.Text = "退出(&X)";
+            this.tsmiExit.Click += new System.EventHandler(this.tsmiExit_Click);
             // 
             // 歌曲管理ToolStripMenuItem
             // 
@@ -75,8 +96,22 @@
             this.tsmiAddSong,
             this.tsmiSongInfo});
             this.歌曲管理ToolStripMenuItem.Name = "歌曲管理ToolStripMenuItem";
-            this.歌曲管理ToolStripMenuItem.Size = new System.Drawing.Size(86, 21);
+            this.歌曲管理ToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
             this.歌曲管理ToolStripMenuItem.Text = "歌曲管理(&O)";
+            // 
+            // tsmiAddSong
+            // 
+            this.tsmiAddSong.Name = "tsmiAddSong";
+            this.tsmiAddSong.Size = new System.Drawing.Size(166, 22);
+            this.tsmiAddSong.Text = "新增歌曲(&N)";
+            this.tsmiAddSong.Click += new System.EventHandler(this.tsmiAddSong_Click);
+            // 
+            // tsmiSongInfo
+            // 
+            this.tsmiSongInfo.Name = "tsmiSongInfo";
+            this.tsmiSongInfo.Size = new System.Drawing.Size(166, 22);
+            this.tsmiSongInfo.Text = "查询歌曲信息(&S)";
+            this.tsmiSongInfo.Click += new System.EventHandler(this.tsmiSongInfo_Click);
             // 
             // 设置资源路径ToolStripMenuItem
             // 
@@ -84,8 +119,22 @@
             this.tsmiSingerPhoto,
             this.tsmiSongPath});
             this.设置资源路径ToolStripMenuItem.Name = "设置资源路径ToolStripMenuItem";
-            this.设置资源路径ToolStripMenuItem.Size = new System.Drawing.Size(108, 21);
+            this.设置资源路径ToolStripMenuItem.Size = new System.Drawing.Size(112, 20);
             this.设置资源路径ToolStripMenuItem.Text = "设置资源路径(&R)";
+            // 
+            // tsmiSingerPhoto
+            // 
+            this.tsmiSingerPhoto.Name = "tsmiSingerPhoto";
+            this.tsmiSingerPhoto.Size = new System.Drawing.Size(166, 22);
+            this.tsmiSingerPhoto.Text = "歌手照片路径(&S)";
+            this.tsmiSingerPhoto.Click += new System.EventHandler(this.tsmiSingerPhoto_Click);
+            // 
+            // tsmiSongPath
+            // 
+            this.tsmiSongPath.Name = "tsmiSongPath";
+            this.tsmiSongPath.Size = new System.Drawing.Size(166, 22);
+            this.tsmiSongPath.Text = "歌曲路径(&O)";
+            this.tsmiSongPath.Click += new System.EventHandler(this.tsmiSongPath_Click);
             // 
             // 帮助ToolStripMenuItem
             // 
@@ -94,76 +143,27 @@
             this.toolStripMenuItem2,
             this.tsmiWebSite});
             this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
-            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
+            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.帮助ToolStripMenuItem.Text = "帮助(&H)";
             // 
             // tsmiAbout
             // 
             this.tsmiAbout.Name = "tsmiAbout";
-            this.tsmiAbout.Size = new System.Drawing.Size(152, 22);
+            this.tsmiAbout.Size = new System.Drawing.Size(145, 22);
             this.tsmiAbout.Text = "关于我们(&A)";
             this.tsmiAbout.Click += new System.EventHandler(this.tsmiAbout_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(142, 6);
             // 
             // tsmiWebSite
             // 
             this.tsmiWebSite.Name = "tsmiWebSite";
-            this.tsmiWebSite.Size = new System.Drawing.Size(152, 22);
+            this.tsmiWebSite.Size = new System.Drawing.Size(145, 22);
             this.tsmiWebSite.Text = "官方网站(&W)";
             this.tsmiWebSite.Click += new System.EventHandler(this.tsmiWebSite_Click);
-            // 
-            // tsmiAddSinger
-            // 
-            this.tsmiAddSinger.Name = "tsmiAddSinger";
-            this.tsmiAddSinger.Size = new System.Drawing.Size(163, 22);
-            this.tsmiAddSinger.Text = "新增歌手(&N)";
-            this.tsmiAddSinger.Click += new System.EventHandler(this.tsmiAddSinger_Click);
-            // 
-            // tsmiSingerInfo
-            // 
-            this.tsmiSingerInfo.Name = "tsmiSingerInfo";
-            this.tsmiSingerInfo.Size = new System.Drawing.Size(163, 22);
-            this.tsmiSingerInfo.Text = "查询歌手信息(&S)";
-            this.tsmiSingerInfo.Click += new System.EventHandler(this.tsmiSingerInfo_Click);
-            // 
-            // tsmiExit
-            // 
-            this.tsmiExit.Name = "tsmiExit";
-            this.tsmiExit.Size = new System.Drawing.Size(163, 22);
-            this.tsmiExit.Text = "退出(&X)";
-            this.tsmiExit.Click += new System.EventHandler(this.tsmiExit_Click);
-            // 
-            // tsmiAddSong
-            // 
-            this.tsmiAddSong.Name = "tsmiAddSong";
-            this.tsmiAddSong.Size = new System.Drawing.Size(163, 22);
-            this.tsmiAddSong.Text = "新增歌曲(&N)";
-            this.tsmiAddSong.Click += new System.EventHandler(this.tsmiAddSong_Click);
-            // 
-            // tsmiSongInfo
-            // 
-            this.tsmiSongInfo.Name = "tsmiSongInfo";
-            this.tsmiSongInfo.Size = new System.Drawing.Size(163, 22);
-            this.tsmiSongInfo.Text = "查询歌曲信息(&S)";
-            this.tsmiSongInfo.Click += new System.EventHandler(this.tsmiSongInfo_Click);
-            // 
-            // tsmiSingerPhoto
-            // 
-            this.tsmiSingerPhoto.Name = "tsmiSingerPhoto";
-            this.tsmiSingerPhoto.Size = new System.Drawing.Size(163, 22);
-            this.tsmiSingerPhoto.Text = "歌手照片路径(&S)";
-            this.tsmiSingerPhoto.Click += new System.EventHandler(this.tsmiSingerPhoto_Click);
-            // 
-            // tsmiSongPath
-            // 
-            this.tsmiSongPath.Name = "tsmiSongPath";
-            this.tsmiSongPath.Size = new System.Drawing.Size(163, 22);
-            this.tsmiSongPath.Text = "歌曲路径(&O)";
-            this.tsmiSongPath.Click += new System.EventHandler(this.tsmiSongPath_Click);
             // 
             // FrmAdmin
             // 
@@ -177,6 +177,7 @@
             this.Name = "FrmAdmin";
             this.Text = "技宇KTV管理系统";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmAdmin_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
