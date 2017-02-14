@@ -38,7 +38,7 @@ namespace Server
             string song_play_count = numCount.Value.ToString();
             string sql = string.Format("insert into song_info values('{0}','{1}',{2},{3},{4},'{5}',{6})", song_name, song_ab, song_word_count, songtype_id, singer_id, song_url.Substring(song_url.IndexOf("\\")+1), song_play_count);
             DBHelper.conn.Open();
-            int result = 0;
+            int result = 0; 
             File.Copy(song_url, KTVUtil.songPath + song_url.Substring(song_url.LastIndexOf("\\") + 1));
             try
             {
