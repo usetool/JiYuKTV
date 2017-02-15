@@ -34,11 +34,11 @@ namespace Client
             switch (time)   
             {
                 case 5:
-                    this.lblProgress.Text = "正在登录，请稍后……";
+                    this.lblProgress.Text = "检查更新...";
                     break;
                 case 10:
                     BindPath();
-                    this.lblProgress.Text = "正在加载后台……";
+                    this.lblProgress.Text = "正在加载前台……";
                     break;
                 case 15:
                     this.lblProgress.Text = "正在加载图片……";

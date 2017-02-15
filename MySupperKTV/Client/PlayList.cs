@@ -10,14 +10,17 @@ namespace Client
     /// </summary>
     public class PlayList
     {
-        private List<Song> songList = new List<Song>();
+        /// <summary>
+        /// 静态全局播放列表
+        /// </summary>
+        public static List<Song> songList = new List<Song>();
         /// <summary>
         /// 当前播放的歌曲的名称
         /// </summary>
         /// <returns></returns>
         public string PlayingSongName()
         {
-            return "";
+            return songList[0].SongName;
         }
         /// <summary>
         /// 获取当前播放的歌曲对象
@@ -25,7 +28,7 @@ namespace Client
         /// <returns></returns>
         public Song GetPlayingSong()
         {
-            return null;
+            return songList[0];
         }
         /// <summary>
         /// 获取下一首要播放的歌曲名称
@@ -33,7 +36,7 @@ namespace Client
         /// <returns></returns>
         public string NextSongName()
         {
-            return "";
+            return songList[1].SongName;
         }
         /// <summary>
         /// 添加歌曲到列表
@@ -41,7 +44,7 @@ namespace Client
         /// <param name="song"></param>
         public void AddSong(Song song)
         {
-
+            songList.Add(song);
         }
     }
 }

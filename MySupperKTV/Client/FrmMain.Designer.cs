@@ -72,11 +72,11 @@
             this.lblPlayListSinger1 = new System.Windows.Forms.Label();
             this.lblPlayListSong1 = new System.Windows.Forms.Label();
             this.lblPlayListSongNow = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNo5 = new System.Windows.Forms.Label();
+            this.lblNo4 = new System.Windows.Forms.Label();
+            this.lblNo2 = new System.Windows.Forms.Label();
+            this.lblNo3 = new System.Windows.Forms.Label();
+            this.lblNo1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblPageText = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -87,11 +87,22 @@
             this.lblVolumeBar = new System.Windows.Forms.Label();
             this.timerShowPlayList = new System.Windows.Forms.Timer(this.components);
             this.timerHidePlayList = new System.Windows.Forms.Timer(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblNewMusicOrder = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.timerMovePanel = new System.Windows.Forms.Timer(this.components);
+            this.timerCountDownTime = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.palToolBar.SuspendLayout();
             this.plPlayer.SuspendLayout();
             this.plWillPlayerList.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // axWindowsMediaPlayer1
@@ -352,11 +363,11 @@
             this.plWillPlayerList.Controls.Add(this.lblPlayListSinger1);
             this.plWillPlayerList.Controls.Add(this.lblPlayListSong1);
             this.plWillPlayerList.Controls.Add(this.lblPlayListSongNow);
-            this.plWillPlayerList.Controls.Add(this.label8);
-            this.plWillPlayerList.Controls.Add(this.label7);
-            this.plWillPlayerList.Controls.Add(this.label6);
-            this.plWillPlayerList.Controls.Add(this.label5);
-            this.plWillPlayerList.Controls.Add(this.label1);
+            this.plWillPlayerList.Controls.Add(this.lblNo5);
+            this.plWillPlayerList.Controls.Add(this.lblNo4);
+            this.plWillPlayerList.Controls.Add(this.lblNo2);
+            this.plWillPlayerList.Controls.Add(this.lblNo3);
+            this.plWillPlayerList.Controls.Add(this.lblNo1);
             this.plWillPlayerList.Controls.Add(this.panel1);
             this.plWillPlayerList.Location = new System.Drawing.Point(926, 400);
             this.plWillPlayerList.Name = "plWillPlayerList";
@@ -375,6 +386,7 @@
             this.lblPlayListDelete5.TabIndex = 51;
             this.lblPlayListDelete5.Text = "删";
             this.lblPlayListDelete5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPlayListDelete5.Visible = false;
             // 
             // lblPlayListTop5
             // 
@@ -388,6 +400,7 @@
             this.lblPlayListTop5.TabIndex = 50;
             this.lblPlayListTop5.Text = "顶";
             this.lblPlayListTop5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPlayListTop5.Visible = false;
             // 
             // lblPlayListSinger5
             // 
@@ -401,6 +414,7 @@
             this.lblPlayListSinger5.TabIndex = 49;
             this.lblPlayListSinger5.Text = "BaHa Men";
             this.lblPlayListSinger5.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblPlayListSinger5.Visible = false;
             // 
             // lblPlayListDelete4
             // 
@@ -414,6 +428,7 @@
             this.lblPlayListDelete4.TabIndex = 48;
             this.lblPlayListDelete4.Text = "删";
             this.lblPlayListDelete4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPlayListDelete4.Visible = false;
             // 
             // lblPlayListTop4
             // 
@@ -427,6 +442,7 @@
             this.lblPlayListTop4.TabIndex = 47;
             this.lblPlayListTop4.Text = "顶";
             this.lblPlayListTop4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPlayListTop4.Visible = false;
             // 
             // lblPlayListSinger4
             // 
@@ -440,6 +456,7 @@
             this.lblPlayListSinger4.TabIndex = 46;
             this.lblPlayListSinger4.Text = "MC乐智";
             this.lblPlayListSinger4.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblPlayListSinger4.Visible = false;
             // 
             // lblPlayListDelete3
             // 
@@ -453,6 +470,7 @@
             this.lblPlayListDelete3.TabIndex = 45;
             this.lblPlayListDelete3.Text = "删";
             this.lblPlayListDelete3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPlayListDelete3.Visible = false;
             // 
             // lblPlayListTop3
             // 
@@ -466,6 +484,7 @@
             this.lblPlayListTop3.TabIndex = 44;
             this.lblPlayListTop3.Text = "顶";
             this.lblPlayListTop3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPlayListTop3.Visible = false;
             // 
             // lblPlayListSinger3
             // 
@@ -479,6 +498,7 @@
             this.lblPlayListSinger3.TabIndex = 43;
             this.lblPlayListSinger3.Text = "周杰伦";
             this.lblPlayListSinger3.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblPlayListSinger3.Visible = false;
             // 
             // lblPlayListDelete2
             // 
@@ -492,6 +512,7 @@
             this.lblPlayListDelete2.TabIndex = 42;
             this.lblPlayListDelete2.Text = "删";
             this.lblPlayListDelete2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPlayListDelete2.Visible = false;
             // 
             // lblPlayListTop2
             // 
@@ -505,6 +526,7 @@
             this.lblPlayListTop2.TabIndex = 41;
             this.lblPlayListTop2.Text = "顶";
             this.lblPlayListTop2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPlayListTop2.Visible = false;
             // 
             // lblPlayListSinger2
             // 
@@ -518,6 +540,7 @@
             this.lblPlayListSinger2.TabIndex = 40;
             this.lblPlayListSinger2.Text = "周杰伦";
             this.lblPlayListSinger2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblPlayListSinger2.Visible = false;
             // 
             // lblPlayListSong5
             // 
@@ -531,6 +554,7 @@
             this.lblPlayListSong5.TabIndex = 39;
             this.lblPlayListSong5.Text = "Who Let Dogs Out";
             this.lblPlayListSong5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPlayListSong5.Visible = false;
             // 
             // lblPlayListSong4
             // 
@@ -544,6 +568,7 @@
             this.lblPlayListSong4.TabIndex = 38;
             this.lblPlayListSong4.Text = "刀山火海";
             this.lblPlayListSong4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPlayListSong4.Visible = false;
             // 
             // lblPlayListSong3
             // 
@@ -557,6 +582,7 @@
             this.lblPlayListSong3.TabIndex = 37;
             this.lblPlayListSong3.Text = "告白气球";
             this.lblPlayListSong3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPlayListSong3.Visible = false;
             // 
             // lblPlayListSong2
             // 
@@ -570,6 +596,7 @@
             this.lblPlayListSong2.TabIndex = 36;
             this.lblPlayListSong2.Text = "半岛铁盒";
             this.lblPlayListSong2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPlayListSong2.Visible = false;
             // 
             // lblPlayListNext
             // 
@@ -609,6 +636,7 @@
             this.lblPlayListDelete1.TabIndex = 33;
             this.lblPlayListDelete1.Text = "删";
             this.lblPlayListDelete1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPlayListDelete1.Visible = false;
             // 
             // lblPlayListTop1
             // 
@@ -622,6 +650,7 @@
             this.lblPlayListTop1.TabIndex = 32;
             this.lblPlayListTop1.Text = "顶";
             this.lblPlayListTop1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPlayListTop1.Visible = false;
             // 
             // lblPlayListSinger1
             // 
@@ -635,6 +664,7 @@
             this.lblPlayListSinger1.TabIndex = 31;
             this.lblPlayListSinger1.Text = "庞龙";
             this.lblPlayListSinger1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblPlayListSinger1.Visible = false;
             // 
             // lblPlayListSong1
             // 
@@ -648,6 +678,7 @@
             this.lblPlayListSong1.TabIndex = 30;
             this.lblPlayListSong1.Text = "兄弟抱一下";
             this.lblPlayListSong1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPlayListSong1.Visible = false;
             // 
             // lblPlayListSongNow
             // 
@@ -662,70 +693,75 @@
             this.lblPlayListSongNow.Text = "曾经的你(在播)";
             this.lblPlayListSongNow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label8
+            // lblNo5
             // 
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label8.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(5, 202);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 23);
-            this.label8.TabIndex = 28;
-            this.label8.Text = "05";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNo5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblNo5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblNo5.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblNo5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNo5.Location = new System.Drawing.Point(5, 202);
+            this.lblNo5.Name = "lblNo5";
+            this.lblNo5.Size = new System.Drawing.Size(42, 23);
+            this.lblNo5.TabIndex = 28;
+            this.lblNo5.Text = "05";
+            this.lblNo5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNo5.Visible = false;
             // 
-            // label7
+            // lblNo4
             // 
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label7.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(5, 168);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(42, 23);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "04";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNo4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblNo4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblNo4.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblNo4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNo4.Location = new System.Drawing.Point(5, 168);
+            this.lblNo4.Name = "lblNo4";
+            this.lblNo4.Size = new System.Drawing.Size(42, 23);
+            this.lblNo4.TabIndex = 27;
+            this.lblNo4.Text = "04";
+            this.lblNo4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNo4.Visible = false;
             // 
-            // label6
+            // lblNo2
             // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(5, 96);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 23);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "02";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblNo2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblNo2.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblNo2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNo2.Location = new System.Drawing.Point(5, 96);
+            this.lblNo2.Name = "lblNo2";
+            this.lblNo2.Size = new System.Drawing.Size(42, 23);
+            this.lblNo2.TabIndex = 26;
+            this.lblNo2.Text = "02";
+            this.lblNo2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNo2.Visible = false;
             // 
-            // label5
+            // lblNo3
             // 
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(5, 132);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 23);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "03";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNo3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblNo3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblNo3.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblNo3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNo3.Location = new System.Drawing.Point(5, 132);
+            this.lblNo3.Name = "lblNo3";
+            this.lblNo3.Size = new System.Drawing.Size(42, 23);
+            this.lblNo3.TabIndex = 25;
+            this.lblNo3.Text = "03";
+            this.lblNo3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNo3.Visible = false;
             // 
-            // label1
+            // lblNo1
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(5, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 23);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "01";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblNo1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblNo1.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblNo1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNo1.Location = new System.Drawing.Point(5, 57);
+            this.lblNo1.Name = "lblNo1";
+            this.lblNo1.Size = new System.Drawing.Size(42, 23);
+            this.lblNo1.TabIndex = 24;
+            this.lblNo1.Text = "01";
+            this.lblNo1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNo1.Visible = false;
             // 
             // panel1
             // 
@@ -819,6 +855,138 @@
             this.timerHidePlayList.Interval = 10;
             this.timerHidePlayList.Tick += new System.EventHandler(this.timerHidePlayList_Tick);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.lblNewMusicOrder);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(25, 95);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1328, 500);
+            this.panel2.TabIndex = 26;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmMain_MouseMove);
+            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.Red;
+            this.label11.Font = new System.Drawing.Font("微软雅黑", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(1127, -1);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(200, 500);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "新歌榜";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label11.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.label11.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmMain_MouseMove);
+            this.label11.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.Red;
+            this.label10.Font = new System.Drawing.Font("微软雅黑", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(921, -1);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(200, 500);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "新歌榜";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.label10.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmMain_MouseMove);
+            this.label10.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.OrangeRed;
+            this.label8.Font = new System.Drawing.Font("微软雅黑", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(665, 253);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(250, 245);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "选秀榜";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.label8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmMain_MouseMove);
+            this.label8.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.OrangeRed;
+            this.label7.Font = new System.Drawing.Font("微软雅黑", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(409, 253);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(250, 245);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "选秀榜";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.label7.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmMain_MouseMove);
+            this.label7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.OrangeRed;
+            this.label6.Font = new System.Drawing.Font("微软雅黑", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(409, -1);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(505, 245);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "选秀榜";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.label6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmMain_MouseMove);
+            this.label6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            // 
+            // lblNewMusicOrder
+            // 
+            this.lblNewMusicOrder.BackColor = System.Drawing.Color.Red;
+            this.lblNewMusicOrder.Font = new System.Drawing.Font("微软雅黑", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblNewMusicOrder.ForeColor = System.Drawing.Color.White;
+            this.lblNewMusicOrder.Location = new System.Drawing.Point(203, -1);
+            this.lblNewMusicOrder.Name = "lblNewMusicOrder";
+            this.lblNewMusicOrder.Size = new System.Drawing.Size(200, 500);
+            this.lblNewMusicOrder.TabIndex = 1;
+            this.lblNewMusicOrder.Text = "新歌榜";
+            this.lblNewMusicOrder.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblNewMusicOrder.Click += new System.EventHandler(this.lblNewMusicOrder_Click);
+            this.lblNewMusicOrder.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.lblNewMusicOrder.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmMain_MouseMove);
+            this.lblNewMusicOrder.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Red;
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(-3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(200, 500);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "热歌榜";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmMain_MouseMove);
+            this.label1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            // 
+            // timerMovePanel
+            // 
+            this.timerMovePanel.Interval = 50;
+            // 
+            // timerCountDownTime
+            // 
+            this.timerCountDownTime.Tick += new System.EventHandler(this.timerCountDownTime_Tick);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -840,6 +1008,7 @@
             this.Controls.Add(this.lblAtmosphere);
             this.Controls.Add(this.lblToning);
             this.Controls.Add(this.palToolBar);
+            this.Controls.Add(this.panel2);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMain";
@@ -850,6 +1019,7 @@
             this.plPlayer.ResumeLayout(false);
             this.plWillPlayerList.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -903,16 +1073,26 @@
         private System.Windows.Forms.Label lblPlayListSinger1;
         private System.Windows.Forms.Label lblPlayListSong1;
         private System.Windows.Forms.Label lblPlayListSongNow;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNo5;
+        private System.Windows.Forms.Label lblNo4;
+        private System.Windows.Forms.Label lblNo2;
+        private System.Windows.Forms.Label lblNo3;
+        private System.Windows.Forms.Label lblNo1;
         private System.Windows.Forms.Label lblPageText;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblVolumeBar;
         private System.Windows.Forms.Timer timerShowPlayList;
         private System.Windows.Forms.Timer timerHidePlayList;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Timer timerMovePanel;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblNewMusicOrder;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Timer timerCountDownTime;
     }
 }
 

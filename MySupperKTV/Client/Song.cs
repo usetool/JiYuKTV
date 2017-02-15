@@ -12,6 +12,7 @@ namespace Client
     {
         private string songName;
         private string songUrl;
+        private string singerName;
         private SongPlayState playState = SongPlayState.unplayed;
         /// <summary>
         /// 歌曲名称
@@ -56,6 +57,21 @@ namespace Client
             set
             {
                 playState = value;
+            }
+        }
+        /// <summary>
+        /// 歌手名字
+        /// </summary>
+        public string SingerName
+        {
+            get
+            {
+                return singerName;
+            }
+
+            set
+            {
+                singerName = value;
             }
         }
     }
